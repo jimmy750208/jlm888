@@ -1,179 +1,416 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>潔麗美 JLM-888 重油垢洗淨劑</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>潔麗美 JLM-888 重油垢洗淨劑｜專業清潔劑</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="潔麗美 JLM-888 重油垢洗淨劑，專業乳化分解油垢，適用冷氣、排油煙機、瓦斯爐等，安全不傷材質。訂購專線0982-517-023" />
+  <meta name="keywords" content="潔麗美, JLM-888, 清潔劑, 重油垢, 冷氣清潔, 排油煙機, 清潔用品" />
+  <meta name="author" content="潔麗美" />
+
+  <!-- Open Graph for social -->
+  <meta property="og:title" content="潔麗美 JLM-888 重油垢洗淨劑" />
+  <meta property="og:description" content="專業乳化分解油垢，適用冷氣、排油煙機、瓦斯爐，安全不傷材質。" />
+  <meta property="og:image" content="images/111.jpg" />
+  <meta property="og:type" content="website" />
+
   <style>
+    /* Reset and base styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
     body {
-      font-family: "Microsoft JhengHei", sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f2f4f8;
-      color: #333;
+      font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      background-color: #f9fafc;
+      color: #2c3e50;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth; /* 平滑滾動 */
     }
-    header {
-      background-color: #003366;
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* 導覽列 */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #283593;
+      display: flex;
+      justify-content: center;
+      padding: 0.8rem 1rem;
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+    nav a {
       color: white;
-      padding: 1.2em;
+      margin: 0 1.2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1;
+      padding: 6px 0;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.3s ease;
+      user-select: none;
+    }
+    nav a:hover,
+    nav a.active {
+      border-bottom: 3px solid #f39c12;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg, #1a237e, #283593);
+      color: #fff;
       text-align: center;
+      padding: 3.5rem 1rem 2rem; /* 預留nav高度 */
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      user-select: none;
+      animation: fadeInDown 1s ease forwards;
     }
-    header h1 {
-      margin: 0;
-      font-size: 1.8em;
+
+    /* Container */
+    .container {
+      max-width: 1000px;
+      margin: 2.5rem auto 4rem;
+      padding: 0 1rem;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+      overflow: hidden;
     }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 1em auto;
-    }
-    .content {
-      padding: 1.5em;
-      max-width: 950px;
-      margin: auto;
-      background-color: white;
-      box-shadow: 0 0 12px rgba(0,0,0,0.08);
-      border-radius: 10px;
-    }
+
+    /* Section Titles */
     h2 {
-      color: #003366;
-      border-bottom: 2px solid #003366;
-      padding-bottom: 0.3em;
-      margin-top: 2em;
+      color: #1a237e;
+      font-weight: 700;
+      font-size: 1.8rem;
+      border-left: 6px solid #1a237e;
+      padding-left: 1rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeInLeft 0.7s ease forwards;
+    }
+
+    /* Paragraphs and lists */
+    p, ul {
+      max-width: 720px;
+      margin: 0 auto 1.2rem;
+      font-size: 1rem;
+      color: #34495e;
     }
     ul {
-      padding-left: 1.5em;
-      line-height: 1.8;
+      padding-left: 1.5rem;
+      list-style-type: disc;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
     }
     .highlight {
       color: #c0392b;
-      font-weight: bold;
+      font-weight: 700;
     }
-    .contact {
-      background-color: #f0f0f0;
-      padding: 2em 1em;
-      margin-top: 3em;
-      text-align: center;
-      border-top: 2px solid #003366;
-      border-radius: 0 0 10px 10px;
+
+    /* Images */
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 1.5rem auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
+    img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Compare photos grid */
     .compare-photos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1em;
-      text-align: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 0 1rem 2rem;
     }
-    .compare-photos div {
-      max-width: 300px;
+    .compare-photos > div {
+      background: #f5f7fa;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .compare-photos > div.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .compare-photos p {
+      margin-top: 0.8rem;
+      font-weight: 600;
+      color: #1a237e;
+      user-select: none;
+    }
+
+    /* Contact section */
+    .contact {
+      background-color: #e3eaf2;
+      border-left: 6px solid #1a237e;
+      border-radius: 0 0 12px 12px;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #2c3e50;
+      user-select: none;
+    }
+    .contact p {
+      margin: 0.8rem 0;
+    }
+    .contact .highlight {
+      font-weight: 700;
     }
     .qr-code {
-      width: 200px;
-      margin: 1em auto;
+      width: 180px;
+      max-width: 90vw;
+      margin: 1rem auto 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Back to top button */
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #1a237e;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      font-size: 24px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      user-select: none;
+      z-index: 1000;
+    }
+    #backToTopBtn.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header {
+        font-size: 1.6rem;
+        padding: 3rem 1rem 1.5rem;
+      }
+      .container {
+        margin: 1.5rem auto 3rem;
+        padding: 1.5rem 1rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      nav a {
+        margin: 0 0.8rem;
+        font-size: 0.9rem;
+      }
+      #backToTopBtn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>潔麗美 JLM-888 重油垢洗淨劑</h1>
-</header>
+  <!-- 導覽列 -->
+  <nav>
+    <a href="#about" class="nav-link">關於我們</a>
+    <a href="#features" class="nav-link">特色與用途</a>
+    <a href="#usage" class="nav-link">使用方法</a>
+    <a href="#price" class="nav-link">價格與運費</a>
+    <a href="#comparison" class="nav-link">清潔前後</a>
+    <a href="#contact" class="nav-link">聯絡我們</a>
+  </nav>
 
-<div class="content">
+  <!-- 頁首 -->
+  <header>潔麗美 JLM-888 重油垢洗淨劑</header>
 
-  <img src="images/111.jpg" alt="JLM-888 宣傳圖">
+  <!-- 主內容 -->
+  <main class="container">
 
-  <h2>用途</h2>
-  <ul>
-    <li>冷氣機、排油煙機、瓦斯爐、流理台、磁磚、不銹鋼、塑膠材質表面各種油垢。</li>
-  </ul>
+    <section id="about" tabindex="-1">
+      <h2>關於我們</h2>
+      <p style="max-width: 720px; margin: auto; text-align:center;">
+        專業的重油垢清潔劑品牌，致力於提供有效且安全的清潔方案，滿足冷氣機、排油煙機等多種需求。
+      </p>
+    </section>
 
-  <h2>特色</h2>
-  <ul>
-    <li>強力乳化分解重油垢，滲透溶解油垢後易於沖洗，讓物品煥然一新。</li>
-    <li><span class="highlight">不傷害冷氣藍波、不咬磁磚、大理石。</span></li>
-  </ul>
+    <section id="features" tabindex="-1">
+      <h2>特色與用途</h2>
+      <img src="images/111.jpg" alt="JLM-888 宣傳圖" loading="lazy" />
+      <ul>
+        <li>強力乳化分解重油垢，滲透溶解油垢後易於沖洗，讓物品煥然一新。</li>
+        <li><span class="highlight">不傷害冷氣藍波、不咬磁磚、大理石。</span></li>
+        <li>適用冷氣機、排油煙機、瓦斯爐、流理台、磁磚、不銹鋼、塑膠等多種表面油垢清潔。</li>
+      </ul>
+    </section>
 
-  <h2>使用方法</h2>
-  <ul>
-    <li>裝入噴霧器後直接噴灑，靜置 3～5 分鐘後沖洗。</li>
-    <li>可依重垢程度稀釋 1:4 使用。</li>
-  </ul>
+    <section id="usage" tabindex="-1">
+      <h2>使用方法</h2>
+      <ul>
+        <li>裝入噴霧器後直接噴灑，靜置 3～5 分鐘後沖洗。</li>
+        <li>可依重垢程度稀釋 1:4 使用。</li>
+      </ul>
 
-  <h2>注意事項</h2>
-  <ul>
-    <li>務必配戴護目鏡、口罩、手套，保持通風。</li>
-    <li>請勿將產品接觸食物。</li>
-    <li>避免陽光直射與孩童接觸。</li>
-  </ul>
+      <h2>注意事項</h2>
+      <ul>
+        <li>務必配戴護目鏡、口罩、手套，保持通風。</li>
+        <li>請勿將產品接觸食物。</li>
+        <li>避免陽光直射與孩童接觸。</li>
+      </ul>
 
-  <h2>成分與 pH 值</h2>
-  <ul>
-    <li>成分：特殊去污劑、界面活性劑、德國香精</li>
-    <li>pH 值：約 13（強鹼性）</li>
-  </ul>
+      <h2>成分與 pH 值</h2>
+      <ul>
+        <li>成分：特殊去污劑、界面活性劑、德國香精</li>
+        <li>pH 值：約 13（強鹼性）</li>
+      </ul>
+    </section>
 
-  <h2>價格與運費</h2>
-  <ul>
-    <li><strong>冷氣保養藥水／洗衣機皂垢去除藥水（側洗管路劑）</strong></li>
-    <li>每桶 <span class="highlight">1000 元</span></li>
-    <li>運費：每桶 <span class="highlight">150 元</span>（<span style="color: #666;">花東與宜蘭另計</span>）</li>
-    <li>一次購買 <strong>五桶</strong>：<span class="highlight">5000 元（含運費）</span></li>
-    <li>一次購買 <strong>十桶以上</strong>：每桶<span class="highlight">950 元</span>，<strong>享有台灣本島免運</strong></li>
-  </ul>
+    <section id="price" tabindex="-1">
+      <h2>價格與運費</h2>
+      <ul>
+        <li><strong>冷氣保養藥水／洗衣機皂垢去除藥水（側洗管路劑）</strong></li>
+        <li>每桶 <span class="highlight">1000 元</span></li>
+        <li>運費：每桶 <span class="highlight">150 元</span>（<span style="color: #7f8c8d;">花東宜蘭另計</span>）</li>
+        <li>一次購買 <strong>五桶</strong>：<span class="highlight">5000 元（含運費）</span></li>
+        <li>一次購買 <strong>十桶以上</strong>：每桶 <span class="highlight">950 元</span>，<strong>享有台灣本島免運</strong></li>
+      </ul>
 
-  <h2>產品外觀</h2>
-  <img src="images/2.jpg" alt="產品桶裝實拍圖">
+      <h2>產品外觀</h2>
+      <img src="images/2.jpg" alt="產品桶裝實拍圖" loading="lazy" />
+    </section>
 
-  <h2>清潔前後對比照</h2>
-  <p>以下為實際使用 JLM-888 清潔劑後的效果展示：</p>
+    <section id="comparison" tabindex="-1">
+      <h2>清潔前後對比照</h2>
+      <p style="max-width:720px; margin:auto;">
+        以下為實際使用 JLM-888 清潔劑後的效果展示：
+      </p>
 
-  <div class="compare-photos">
-    <div>
-      <img src="images/3.jpg" alt="清潔前">
-      <p><strong>使用前</strong></p>
-    </div>
-    <div>
-      <img src="images/4.jpg" alt="清潔後">
-      <p><strong>使用後</strong></p>
-    </div>
-    <div>
-      <img src="images/5.jpg" alt="清潔前">
-      <p><strong>使用前</strong></p>
-    </div>
-    <div>
-      <img src="images/6.jpg" alt="清潔後">
-      <p><strong>使用後</strong></p>
-    </div>
-    <div>
-      <img src="images/7.jpg" alt="清潔前">
-      <p><strong>使用前</strong></p>
-    </div>
-    <div>
-      <img src="images/8.jpg" alt="清潔後">
-      <p><strong>使用後</strong></p>
-    </div>
-    <div>
-      <img src="images/10.jpg" alt="清潔前">
-      <p><strong>使用前</strong></p>
-    </div>
-    <div>
-      <img src="images/11.jpg" alt="清潔後">
-      <p><strong>使用後</strong></p>
-    </div>
-  </div>
+      <div class="compare-photos" aria-label="清潔前後對比照片">
+        <div><img src="images/3.jpg" alt="清潔前" loading="lazy" /><p>使用前</p></div>
+        <div><img src="images/4.jpg" alt="清潔後" loading="lazy" /><p>使用後</p></div>
+        <div><img src="images/5.jpg" alt="清潔前" loading="lazy" /><p>使用前</p></div>
+        <div><img src="images/6.jpg" alt="清潔後" loading="lazy" /><p>使用後</p></div>
+        <div><img src="images/7.jpg" alt="清潔前" loading="lazy" /><p>使用前</p></div>
+        <div><img src="images/8.jpg" alt="清潔後" loading="lazy" /><p>使用後</p></div>
+        <div><img src="images/10.jpg" alt="清潔前" loading="lazy" /><p>使用前</p></div>
+        <div><img src="images/11.jpg" alt="清潔後" loading="lazy" /><p>使用後</p></div>
+      </div>
+    </section>
 
-  <div class="contact">
-    <h2>聯絡我們</h2>
-    <p>歡迎洽詢產品資訊與訂購方式：</p>
-    <img src="images/5566.jpg" alt="LINE QR code" class="qr-code">
-    <p><strong>請掃描 QR Code 加入 LINE</strong></p>
-    <p>或直接搜尋 LINE ID：<span class="highlight">mr.seahorse</span></p>
-    <p>訂購專線：<span class="highlight">0982-517-023</span></p>
-  </div>
+    <section id="contact" tabindex="-1" class="contact" aria-label="聯絡我們">
+      <h2>聯絡我們</h2>
+      <p>歡迎洽詢產品資訊與訂購方式：</p>
+      <img src="images/5566.jpg" alt="LINE QR code" class="qr-code" loading="lazy" />
+      <p><strong>請掃描 QR Code 加入 LINE</strong></p>
+      <p>或直接搜尋 LINE ID：<span class="highlight">mr.seahorse</span></p>
+      <p>訂購專線：<span class="highlight">0982-517-023</span></p>
+    </section>
 
-</div>
+  </main>
 
+  <!-- 返回頂部按鈕 -->
+  <button id="backToTopBtn" aria-label="返回頁首" title="返回頂部">&uarr;</button>
+
+  <script>
+    // Intersection Observer for fade-in on scroll
+    const compareItems = document.querySelectorAll('.compare-photos > div');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    compareItems.forEach(item => observer.observe(item));
+
+    // 返回頂部按鈕功能
+    const backToTopBtn = document.getElementById('backToTopBtn');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 導覽列 active 狀態切換（根據滾動位置）
+    const sections = document.querySelectorAll('main section');
+    const navLinks = document.querySelectorAll('nav a');
+
+    window.addEventListener('scroll', () => {
+      let currentIndex = sections.length - 1;
+      sections.forEach((section, i) => {
+        const sectionTop = section.offsetTop - 120; // 預留 nav 高度 + margin
+        if (window.scrollY >= sectionTop) {
+          currentIndex = i;
+        }
+      });
+      navLinks.forEach(link => link.classList.remove('active'));
+      if (navLinks[currentIndex]) {
+        navLinks[currentIndex].classList.add('active');
+      }
+    });
+  </script>
 </body>
 </html>
